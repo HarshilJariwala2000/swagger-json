@@ -1,0 +1,2970 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/phier/v1/category/get-all-tenant": {
+      "post": {
+        "operationId": "CategoryController_getAllTenantCategories",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/get-all-tenant",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PageAndLimit"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllCategoryResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/get-all-core": {
+      "post": {
+        "operationId": "CategoryController_getAllCoreCategories",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/get-all-core",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PageAndLimit"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllCategoryResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/get-all-marketplace": {
+      "post": {
+        "operationId": "CategoryController_getMarketplaceChildrens",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/get-all-marketplace",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetMarketplaceCategoryRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMarketplaceCategoryResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/add-new-category": {
+      "post": {
+        "operationId": "CategoryController_addNewCategory",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/add-new-category",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddNewCategoryRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddNewCategoryResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/get-tenant-category-by-id": {
+      "post": {
+        "operationId": "CategoryController_getTenantCategoryById",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/get-tenant-category-by-id",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryByIdResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/get-all-tenant-leaf": {
+      "post": {
+        "operationId": "CategoryController_getAllTenantLeaf",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/get-all-tenant-leaf",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryByIdResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/get-core-root-category": {
+      "post": {
+        "operationId": "CategoryController_getCoreRootCategory",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/get-core-root-category",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCoreCategoryResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/add-level": {
+      "post": {
+        "operationId": "CategoryController_addLevel",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/add-level",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryModifyRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryModifyResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/add-sibling": {
+      "post": {
+        "operationId": "CategoryController_addSibling",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/add-sibling",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryModifyRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryModifyResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/edit-category-name": {
+      "post": {
+        "operationId": "CategoryController_editCategoryName",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/edit-category-name",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryModifyRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryModifyResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/delete-without-subtrees": {
+      "post": {
+        "operationId": "CategoryController_deleteWithoutSubTrees",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/delete-without-subtrees",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefaultResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/delete-with-subtrees": {
+      "post": {
+        "operationId": "CategoryController_deleteWithSubTree",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/delete-with-subtrees",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefaultResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/clear-all-levels": {
+      "post": {
+        "operationId": "CategoryController_clearAllLevels",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/clear-all-levels",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefaultResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/deactivate-category": {
+      "post": {
+        "operationId": "CategoryController_deactivateCategory",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/deactivate-category",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefaultResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/activate-category": {
+      "post": {
+        "operationId": "CategoryController_activateCategory",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/activate-category",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefaultResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/update-hierarchy-level": {
+      "post": {
+        "operationId": "CategoryController_updateHierarchyLevel",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/update-hierarchy-level",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateHierarchyRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateHierarchyResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/get-hierarchy-level": {
+      "post": {
+        "operationId": "CategoryController_getHierarchyLevel",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/get-hierarchy-level",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetHierarchyResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/subscribe-to-marketplace": {
+      "post": {
+        "operationId": "CategoryController_subscribeToMarketplace",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/subscribe-to-marketplace",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SubscribeMarketplaceRequestDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubscribeToMarketplaceResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/inherit-from-core": {
+      "post": {
+        "operationId": "CategoryController_inheritFromCore",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/inherit-from-core",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InheritFromCoreRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllCategoryResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/bulk-upload-category-path-temaplate": {
+      "post": {
+        "operationId": "CategoryController_bulkUploadCategoryPathTemaplate",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/bulk-upload-category-path-temaplate",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefaultResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/category/almusbah-category-template": {
+      "post": {
+        "operationId": "CategoryController_almusbahCategoryTemplate",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/category/bulk-upload-category-path-temaplate",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DefaultResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "category"
+        ]
+      }
+    },
+    "/api/phier/v1/map/display-mapped-categories": {
+      "post": {
+        "operationId": "CategoryMapController_displayMappedCategories",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/map/display-mapped-categories",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisplayMappedCategoriesRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisplayMappedCategoriesResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "map"
+        ]
+      }
+    },
+    "/api/phier/v1/map/display-mapped-channels": {
+      "post": {
+        "operationId": "CategoryMapController_displayMappedChannels",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/map/display-mapped-channels",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisplayMappedChannelsRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisplayMappedChannelsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "map"
+        ]
+      }
+    },
+    "/api/phier/v1/map/display-unmapped-categories": {
+      "post": {
+        "operationId": "CategoryMapController_displayUnmappedCategories",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/map/display-unmapped-categories",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisplayUnmappedCategoriesRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisplayUnmappedCategoryResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "map"
+        ]
+      }
+    },
+    "/api/phier/v1/map/display-unmapped-channels": {
+      "post": {
+        "operationId": "CategoryMapController_displayUnmappedChannels",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/map/display-unmapped-channels",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisplayUnmappedChannelsRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisplayUnmappedChannelsResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "map"
+        ]
+      }
+    },
+    "/api/phier/v1/map/tenant-to-core-mapping": {
+      "post": {
+        "operationId": "CategoryMapController_tenantToCoreMapping",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/map/tenant-to-core-mapping",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/tenantToCoreMappingRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/tenantToCoreMappingResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "map"
+        ]
+      }
+    },
+    "/api/phier/v1/map/core-to-marketplace-mapping": {
+      "post": {
+        "operationId": "CategoryMapController_coreToMarketplaceMapping",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/map/core-to-marketplace-mapping",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/coreToMarketplaceMappingRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/coreToMarketplaceMappingResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "map"
+        ]
+      }
+    },
+    "/api/phier/v1/map/get-subscribed-channels": {
+      "post": {
+        "operationId": "CategoryMapController_getTenantChildrens",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/map/get-subscribed-channels",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryByIdResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "map"
+        ]
+      }
+    },
+    "/api/phier/v1/map/get-all-channels": {
+      "post": {
+        "operationId": "CategoryMapController_getCoreChildrens",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/map/get-all-channels",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCoreCategoryResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "map"
+        ]
+      }
+    },
+    "/api/phier/v1/health": {
+      "get": {
+        "operationId": "HealthController_check",
+        "x-amazon-apigateway-integration": {
+          "connectionId": "${stageVariables.vpcLinkId}",
+          "httpMethod": "POST",
+          "uri": "https://${stageVariables.baseEndpointUri}/api/phier/v1/health/",
+          "responses": {
+            "default": {
+              "statusCode": "201"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "connectionType": "VPC_LINK",
+          "type": "http_proxy"
+        },
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthCheckResponseDto"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "The Health Check is not successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "error"
+                    },
+                    "info": {
+                      "type": "object",
+                      "example": {
+                        "database": {
+                          "status": "up"
+                        }
+                      },
+                      "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      },
+                      "nullable": true
+                    },
+                    "error": {
+                      "type": "object",
+                      "example": {
+                        "redis": {
+                          "status": "down",
+                          "message": "Could not connect"
+                        }
+                      },
+                      "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      },
+                      "nullable": true
+                    },
+                    "details": {
+                      "type": "object",
+                      "example": {
+                        "database": {
+                          "status": "up"
+                        },
+                        "redis": {
+                          "status": "down",
+                          "message": "Could not connect"
+                        }
+                      },
+                      "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "health"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "dev-vin2-apigateway",
+    "description": "",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "PageAndLimit": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number"
+          },
+          "limit": {
+            "type": "number"
+          },
+          "language_code": {
+            "type": "string"
+          },
+          "flattened": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Any": {
+        "type": "object",
+        "properties": {}
+      },
+      "AllCategoryResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Any"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "GetMarketplaceCategoryRequestDto": {
+        "type": "object",
+        "properties": {
+          "marketplace_name_id": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "marketplace_name_id"
+        ]
+      },
+      "MarketplaceCategoryDto": {
+        "type": "object",
+        "properties": {
+          "marketplace_category_id": {
+            "type": "number"
+          },
+          "category_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "marketplace_name_id": {
+            "type": "number"
+          },
+          "marketplace_name": {
+            "type": "string"
+          },
+          "parent_id": {
+            "type": "number"
+          },
+          "depth": {
+            "type": "number"
+          },
+          "is_leaf": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "marketplace_category_id",
+          "category_name",
+          "marketplace_name_id",
+          "marketplace_name",
+          "parent_id",
+          "depth",
+          "is_leaf"
+        ]
+      },
+      "GetMarketplaceCategoryResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarketplaceCategoryDto"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "AddNewCategoryRequestDto": {
+        "type": "object",
+        "properties": {
+          "category_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "language_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "category_name",
+          "description"
+        ]
+      },
+      "AddNewCategory": {
+        "type": "object",
+        "properties": {
+          "category_name": {
+            "type": "string"
+          },
+          "tenant_id": {
+            "type": "string"
+          },
+          "parent": {
+            "type": "object"
+          },
+          "depth": {
+            "type": "number"
+          },
+          "is_leaf": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "parent_id": {
+            "type": "number"
+          },
+          "deleted_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "tenant_category_id": {
+            "type": "number"
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "category_name",
+          "tenant_id",
+          "parent",
+          "depth",
+          "is_leaf",
+          "description",
+          "parent_id",
+          "deleted_at",
+          "tenant_category_id",
+          "created_at",
+          "updated_at",
+          "is_active"
+        ]
+      },
+      "AddNewCategoryResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AddNewCategory"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "message",
+          "status_code",
+          "data"
+        ]
+      },
+      "IdRequestDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "language_code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "CategoryChild": {
+        "type": "object",
+        "properties": {
+          "tenant_category_id": {
+            "type": "number"
+          },
+          "category_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "parent_id": {
+            "type": "number"
+          },
+          "depth": {
+            "type": "number"
+          },
+          "is_leaf": {
+            "type": "boolean"
+          },
+          "can_add_level": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "tenant_category_id",
+          "category_name",
+          "parent_id",
+          "depth",
+          "is_leaf",
+          "can_add_level"
+        ]
+      },
+      "CategoryWithSingleNestChildren": {
+        "type": "object",
+        "properties": {
+          "tenant_category_id": {
+            "type": "number"
+          },
+          "category_name": {
+            "type": "string"
+          },
+          "parent_id": {
+            "type": "number"
+          },
+          "depth": {
+            "type": "number"
+          },
+          "is_leaf": {
+            "type": "boolean"
+          },
+          "can_add_level": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CategoryChild"
+            }
+          }
+        },
+        "required": [
+          "tenant_category_id",
+          "category_name",
+          "parent_id",
+          "depth",
+          "is_leaf",
+          "can_add_level",
+          "children"
+        ]
+      },
+      "CategoryByIdResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CategoryWithSingleNestChildren"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "CoreCategoryDto": {
+        "type": "object",
+        "properties": {
+          "core_category_id": {
+            "type": "number"
+          },
+          "category_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "parent_id": {
+            "type": "number"
+          },
+          "depth": {
+            "type": "number"
+          },
+          "is_leaf": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "core_category_id",
+          "category_name",
+          "parent_id",
+          "depth",
+          "is_leaf"
+        ]
+      },
+      "GetCoreCategoryResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CoreCategoryDto"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "CategoryModifyRequestDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "category_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "description"
+        ]
+      },
+      "CategoryModify": {
+        "type": "object",
+        "properties": {
+          "category_name": {
+            "type": "string"
+          },
+          "parent_id": {
+            "type": "number"
+          },
+          "depth": {
+            "type": "number"
+          },
+          "is_leaf": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "tenant_category_id": {
+            "type": "number"
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "category_name",
+          "parent_id",
+          "depth",
+          "is_leaf",
+          "description",
+          "tenant_category_id",
+          "created_at",
+          "updated_at",
+          "is_active"
+        ]
+      },
+      "CategoryModifyResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CategoryModify"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "DefaultResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message"
+        ]
+      },
+      "UpdateHierarchyRequestDto": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "number"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "level",
+          "is_active"
+        ]
+      },
+      "UpdateHierarchy": {
+        "type": "object",
+        "properties": {
+          "tenant_id": {
+            "type": "string"
+          },
+          "level": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "level",
+          "description"
+        ]
+      },
+      "UpdateHierarchyResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UpdateHierarchy"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "GetHierarchyLevel": {
+        "type": "object",
+        "properties": {
+          "is_active": {
+            "type": "boolean"
+          },
+          "hierarchy_level": {
+            "type": "number"
+          },
+          "max_category_level": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "is_active",
+          "hierarchy_level",
+          "max_category_level"
+        ]
+      },
+      "GetHierarchyResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetHierarchyLevel"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "SubscribeMarketplaceRequestDto": {
+        "type": "object",
+        "properties": {
+          "marketplace_name_id": {
+            "type": "number"
+          },
+          "marketplace_name": {
+            "type": "string"
+          },
+          "image_url": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "channel_description": {
+            "type": "string"
+          },
+          "image_hosting": {
+            "type": "string"
+          },
+          "image_watermark": {
+            "type": "string"
+          },
+          "sku_sync": {
+            "type": "string"
+          },
+          "price_sync": {
+            "type": "string"
+          },
+          "retain_source_image_path": {
+            "type": "string"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "marketplace_name_id",
+          "marketplace_name",
+          "image_url",
+          "country",
+          "channel_description",
+          "image_hosting",
+          "image_watermark",
+          "sku_sync",
+          "price_sync",
+          "retain_source_image_path",
+          "is_active"
+        ]
+      },
+      "MarketplaceSubscription": {
+        "type": "object",
+        "properties": {
+          "marketplace_name_id": {
+            "type": "number"
+          },
+          "marketplace_name": {
+            "type": "string"
+          },
+          "tenant_id": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "marketplace_name_id",
+          "marketplace_name",
+          "tenant_id"
+        ]
+      },
+      "SubscribeToMarketplaceResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "data": {
+            "$ref": "#/components/schemas/MarketplaceSubscription"
+          }
+        },
+        "required": [
+          "status",
+          "message",
+          "status_code",
+          "data"
+        ]
+      },
+      "InheritFromCoreRequestDto": {
+        "type": "object",
+        "properties": {
+          "ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "ids"
+        ]
+      },
+      "mappedCategoriesFilter": {
+        "type": "object",
+        "properties": {
+          "sort_by": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "merchandise_category": {
+            "type": "string"
+          },
+          "core_category": {
+            "type": "string"
+          },
+          "date_from": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "date_to": {
+            "format": "date-time",
+            "type": "string"
+          }
+        }
+      },
+      "DisplayMappedCategoriesRequestDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number"
+          },
+          "limit": {
+            "type": "number"
+          },
+          "filter": {
+            "$ref": "#/components/schemas/mappedCategoriesFilter"
+          }
+        },
+        "required": [
+          "page",
+          "limit",
+          "filter"
+        ]
+      },
+      "DisplayMappedCategoriesDto": {
+        "type": "object",
+        "properties": {
+          "tenant_to_core_id": {
+            "type": "number"
+          },
+          "merchandising_category": {
+            "type": "string"
+          },
+          "hierarchy": {
+            "type": "string"
+          },
+          "core_root": {
+            "type": "string"
+          },
+          "mapped_with_core": {
+            "type": "string"
+          },
+          "mapped_on": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "mapped_by": {
+            "type": "string"
+          },
+          "status": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "tenant_to_core_id",
+          "merchandising_category",
+          "hierarchy",
+          "core_root",
+          "mapped_with_core",
+          "mapped_on",
+          "mapped_by",
+          "status"
+        ]
+      },
+      "PaginatedDisplayMappedCategoriesResponseData": {
+        "type": "object",
+        "properties": {
+          "page_number": {
+            "type": "number"
+          },
+          "page_size": {
+            "type": "number"
+          },
+          "total_data_count": {
+            "type": "number"
+          },
+          "total_page": {
+            "type": "number"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisplayMappedCategoriesDto"
+            }
+          }
+        },
+        "required": [
+          "page_number",
+          "page_size",
+          "total_data_count",
+          "total_page",
+          "data"
+        ]
+      },
+      "DisplayMappedCategoriesResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaginatedDisplayMappedCategoriesResponseData"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "mappedChannelsFilter": {
+        "type": "object",
+        "properties": {
+          "sort_by": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "channel_category": {
+            "type": "string"
+          },
+          "channel": {
+            "type": "string"
+          },
+          "core_category": {
+            "type": "string"
+          },
+          "date_from": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "date_to": {
+            "format": "date-time",
+            "type": "string"
+          }
+        }
+      },
+      "DisplayMappedChannelsRequestDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number"
+          },
+          "limit": {
+            "type": "number"
+          },
+          "filter": {
+            "$ref": "#/components/schemas/mappedChannelsFilter"
+          }
+        },
+        "required": [
+          "page",
+          "limit",
+          "filter"
+        ]
+      },
+      "DisplayMappedChannelsDto": {
+        "type": "object",
+        "properties": {
+          "core_to_marketplace_id": {
+            "type": "number"
+          },
+          "mapped_core_category": {
+            "type": "string"
+          },
+          "mapped_channel": {
+            "type": "string"
+          },
+          "channel_category": {
+            "type": "string"
+          },
+          "channel_hierarchy": {
+            "type": "string"
+          },
+          "mapped_on": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "mapped_by": {
+            "type": "string"
+          },
+          "status": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "core_to_marketplace_id",
+          "mapped_core_category",
+          "mapped_channel",
+          "channel_category",
+          "channel_hierarchy",
+          "mapped_on",
+          "mapped_by",
+          "status"
+        ]
+      },
+      "PaginatedDisplayMappedChannelsResponseData": {
+        "type": "object",
+        "properties": {
+          "page_number": {
+            "type": "number"
+          },
+          "page_size": {
+            "type": "number"
+          },
+          "total_data_count": {
+            "type": "number"
+          },
+          "total_page": {
+            "type": "number"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DisplayMappedChannelsDto"
+            }
+          }
+        },
+        "required": [
+          "page_number",
+          "page_size",
+          "total_data_count",
+          "total_page",
+          "data"
+        ]
+      },
+      "DisplayMappedChannelsResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaginatedDisplayMappedChannelsResponseData"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "unmappedCategoriesFilter": {
+        "type": "object",
+        "properties": {
+          "sort_by": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "merchandise_category": {
+            "type": "string"
+          }
+        }
+      },
+      "DisplayUnmappedCategoriesRequestDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number"
+          },
+          "limit": {
+            "type": "number"
+          },
+          "filter": {
+            "$ref": "#/components/schemas/unmappedCategoriesFilter"
+          }
+        },
+        "required": [
+          "page",
+          "limit",
+          "filter"
+        ]
+      },
+      "UnmappedCategoryDto": {
+        "type": "object",
+        "properties": {
+          "unmapped_merchandising_category_id": {
+            "type": "number"
+          },
+          "merchandising_category": {
+            "type": "string"
+          },
+          "hierarchy": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "unmapped_merchandising_category_id",
+          "merchandising_category",
+          "hierarchy"
+        ]
+      },
+      "PaginatedDisplayUnmappedCategoryResponseData": {
+        "type": "object",
+        "properties": {
+          "page_number": {
+            "type": "number"
+          },
+          "page_size": {
+            "type": "number"
+          },
+          "total_data_count": {
+            "type": "number"
+          },
+          "total_page": {
+            "type": "number"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnmappedCategoryDto"
+            }
+          }
+        },
+        "required": [
+          "page_number",
+          "page_size",
+          "total_data_count",
+          "total_page",
+          "data"
+        ]
+      },
+      "DisplayUnmappedCategoryResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaginatedDisplayUnmappedCategoryResponseData"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "unmappedChannelsFilter": {
+        "type": "object",
+        "properties": {
+          "sort_by": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "channel": {
+            "type": "string"
+          },
+          "core_category": {
+            "type": "string"
+          }
+        }
+      },
+      "DisplayUnmappedChannelsRequestDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number"
+          },
+          "limit": {
+            "type": "number"
+          },
+          "filter": {
+            "$ref": "#/components/schemas/unmappedChannelsFilter"
+          }
+        },
+        "required": [
+          "page",
+          "limit",
+          "filter"
+        ]
+      },
+      "UnmappedChannelsDto": {
+        "type": "object",
+        "properties": {
+          "unmapped_core_category_id": {
+            "type": "number"
+          },
+          "unmapped_core_category": {
+            "type": "string"
+          },
+          "channel": {
+            "type": "string"
+          },
+          "channel_id": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "unmapped_core_category_id",
+          "unmapped_core_category",
+          "channel",
+          "channel_id"
+        ]
+      },
+      "PaginatedDisplayUnmappedChannelsResponseData": {
+        "type": "object",
+        "properties": {
+          "page_number": {
+            "type": "number"
+          },
+          "page_size": {
+            "type": "number"
+          },
+          "total_data_count": {
+            "type": "number"
+          },
+          "total_page": {
+            "type": "number"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnmappedChannelsDto"
+            }
+          }
+        },
+        "required": [
+          "page_number",
+          "page_size",
+          "total_data_count",
+          "total_page",
+          "data"
+        ]
+      },
+      "DisplayUnmappedChannelsResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaginatedDisplayUnmappedChannelsResponseData"
+            }
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "tenantToCoreMappingRequestDto": {
+        "type": "object",
+        "properties": {
+          "tenant_category_id": {
+            "type": "number"
+          },
+          "core_category_id": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "tenant_category_id",
+          "core_category_id"
+        ]
+      },
+      "tenantToCore": {
+        "type": "object",
+        "properties": {
+          "tenant_category_leaf_id": {
+            "type": "number"
+          },
+          "tenant_id": {
+            "type": "string"
+          },
+          "core_leaf_id": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "tenant_category_leaf_id",
+          "tenant_id",
+          "core_leaf_id"
+        ]
+      },
+      "tenantToCoreMappingResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/tenantToCore"
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "coreToMarketplaceMappingRequestDto": {
+        "type": "object",
+        "properties": {
+          "core_category_id": {
+            "type": "number"
+          },
+          "marketplace_category_id": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "core_category_id",
+          "marketplace_category_id"
+        ]
+      },
+      "coreToMarketplace": {
+        "type": "object",
+        "properties": {
+          "tenant_id": {
+            "type": "string"
+          },
+          "core_leaf_id": {
+            "type": "number"
+          },
+          "marketplace_leaf_id": {
+            "type": "number"
+          },
+          "marketplace_name_id": {
+            "type": "string"
+          },
+          "marketplace_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "core_leaf_id",
+          "marketplace_leaf_id",
+          "marketplace_name_id",
+          "marketplace_name"
+        ]
+      },
+      "coreToMarketplaceMappingResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/coreToMarketplace"
+          }
+        },
+        "required": [
+          "status",
+          "status_code",
+          "message",
+          "data"
+        ]
+      },
+      "HealthCheckResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "info": {
+            "type": "object"
+          },
+          "error": {
+            "type": "object"
+          },
+          "details": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "status",
+          "info",
+          "error",
+          "details"
+        ]
+      }
+    }
+  }
+}
